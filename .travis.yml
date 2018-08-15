@@ -1,0 +1,8 @@
+sudo: required 
+dist: trusty
+install:
+  - sudo scripts/prerequisites.sh
+  - ./mcf -p 0 -b 0 raspberrypi3
+  - source oe-init-build-env
+  
+script: bitbake webos-image
